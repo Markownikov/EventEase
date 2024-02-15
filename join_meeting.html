@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Meeting - EventEase</title>
+    <link rel="stylesheet" href="kachra.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+    <link href="all_css/join_meeting_css.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-image: url(all_css/bg.jpg);
+            height: 100%;
+            background-repeat: repeat;
+            font-family: "Open Sans", sans-serif;
+            color: #444444;
+        }
+
+        @keyframes slideInLeft {
+            0% {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        #tasks {
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0s;
+            animation-name: slideInLeft;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header" class="fixed-top d-flex align-items-center bg-dark">
+        <div class="container d-flex align-items-center justify-content-between">
+
+            <h1 class="logo"><a href="index.html">EventEase</a></h1>
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="/EventEase/dashboard.html" id="username2">Home</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+    <section class="jumbotron text-center my-4 ">
+        <div class="container1 boxtr">
+            <h1 class="jumbotron-heading ">All Events lined up</h1>
+        </div>
+    </section>
+    <div style="display:flex; flex-wrap: wrap; justify-content: space-around;" id="tasks">
+    </div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
+        import { getAuth } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-auth.js";
+        import {
+            getFirestore, doc, getDoc, getDocs, onSnapshot, collection
+        } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore.js";
+        import { getDatabase, ref, get, set, child, update, remove }
+            from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
+
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCCuHkFfn2mx2-shXrkVe_DiTNgHqz1Cos",
+            authDomain: "sefinal-865fc.firebaseapp.com",
+            projectId: "sefinal-865fc",
+            storageBucket: "sefinal-865fc.appspot.com",
+            messagingSenderId: "477088374267",
+            appId: "1:477088374267:web:4dcc40c8f70ccc9a977f5e"
+        };
+
+        // Initialize Firebase
+
+        function AddItemsToTable(ename, edate, etime, hname, oname, sname) {
+
+            const list_el = document.querySelector("#tasks");
+
+            const task_el1 = document.createElement('div');
+            task_el1.classList.add("card", "border-0", "shadow", "rounded-3", "my-4", "mx-2");
+
+            const task_el2 = document.createElement('div');
+            task_el2.classList.add("card-body", "p-4", "p-sm-5");
+
+
+            const task_el3 = document.createElement('h1');
+            task_el3.classList.add("text-uppercase", "text-letter-spacing-xs", "font-weight-bold", "my-4");
+            task_el3.setAttribute("style", "color: #054a85; text-align: center;");
+            task_el3.innerHTML = ename;
+
+            const task_el4 = document.createElement('h4');
+            task_el4.classList.add("mx-auto");
+            task_el4.setAttribute("style", "text-align: center;");
+            task_el4.innerHTML = "Organisation : " + oname;
+
+            const task_el5 = document.createElement('h4');
+            task_el5.classList.add("mx-auto");
+            task_el5.setAttribute("style", "text-align: center;");
+            task_el5.innerHTML = "Host : " + hname;
+
+            const task_el6 = document.createElement('h4');
+            task_el6.classList.add("mx-auto");
+            task_el6.setAttribute("style", "text-align: center;");
+            task_el6.innerHTML = "Speaker : " + sname;
+
+            const task_el7 = document.createElement('h4');
+            task_el7.classList.add("mx-auto");
+            task_el7.setAttribute("style", "text-align: center;");
+            task_el7.innerHTML = "Date : " + edate;
+
+            const task_el8 = document.createElement('div');
+            task_el8.classList.add("mx-auto");
+            task_el8.setAttribute("style", "margin-top: -7%; max-width: 80%;padding-bottom: 25px;");
+
+            const task_el9 = document.createElement('a');
+            task_el9.classList.add("btn", "btn-dark", "text-uppercase", "col-12", "my-2", "mx-auto");
+            task_el9.setAttribute("style", "background-color: #054a85;");
+            task_el9.textContent = "View Schedule";
+
+            const task_el10 = document.createElement('a');
+            task_el10.classList.add("btn", "btn-dark", "text-uppercase", "col-12", "my-2");
+            task_el10.setAttribute("style", "background-color: #054a85;");
+            task_el10.textContent = "Join Meeting";
+
+
+            list_el.appendChild(task_el1);
+
+            task_el1.appendChild(task_el2);
+            task_el1.appendChild(task_el8);
+
+            task_el2.appendChild(task_el3);
+            task_el2.appendChild(task_el7);
+            task_el2.appendChild(task_el4);
+            task_el2.appendChild(task_el5);
+            task_el2.appendChild(task_el6);
+
+            task_el8.appendChild(task_el9);
+            task_el8.appendChild(task_el10);
+
+            // localStorage.setItem("SCHNAME", ename );
+            task_el9.addEventListener('click', (e) => {
+                localStorage.setItem("SCHNAME", ename);
+                location.href = "/EventEase/view_schedule.html";
+            });
+            task_el10.addEventListener('click', (e) => {
+                localStorage.setItem("SCHNAME", ename);
+                location.href = "/EventEase/main_page.html";
+            });
+
+        }
+
+
+
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase();
+
+
+        function SelectAllData() {
+            const dbRef = ref(db);
+            get(child(dbRef, "allDetails"))
+                .then((snapshot) => {
+                    snapshot.forEach(childSnapshot => {
+                        var ename = childSnapshot.val().evname;
+                        var etime = childSnapshot.val().time;
+                        var edate = childSnapshot.val().date;
+                        var hname = childSnapshot.val().hostname;
+                        var oname = childSnapshot.val().orgname;
+                        var sname = childSnapshot.val().speakername;
+                        AddItemsToTable(ename, edate, etime, hname, oname, sname);
+                    })
+                })
+        }
+
+
+
+        window.onload = SelectAllData();
+
+    </script>
+    <script>
+        const name = localStorage.getItem("USERNAME");
+        document.getElementById('username2').innerHTML = name;
+    </script>
+
+</body>
+
+</html>

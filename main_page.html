@@ -1,0 +1,369 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src='https://kit.fontawesome.com/b7cd24b2dd.js' crossorigin='anonymous'></script>
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+    <!-- <link href="only_navbar.css" rel="stylesheet"> -->
+    <link href="all_css/main_page_css.css" rel="stylesheet">
+  <link rel="icon" href="video-conference.png">
+  <title>Meetings - EventEase</title>
+  <style>
+    body {
+      background-color: #202124;
+    }
+    .fixed{
+      position: fixed;
+      right: 0;
+      opacity: 0;
+      visibility: hidden;
+    }
+    .a{
+      position: fixed;
+      right: 0;
+      opacity: 1;
+      visibility:visible;
+    }
+  </style>
+  <script>
+    
+    var count1 = 1;
+    function setColor1(btn) {
+      var property = document.getElementById(btn);
+      if (count1 == 0) {
+        property.style.backgroundColor = "#3C4043"
+        count1 = 1;
+      }
+      else {
+        property.style.backgroundColor = "#EA4335"
+        count1 = 0;
+      }
+    }
+    
+    var count2 = 1;
+    function setColor2(btn) {
+      var property = document.getElementById(btn);
+      if (count2 == 0) {
+        property.style.backgroundColor = "#3C4043"
+        count2 = 1;
+      }
+      else {
+        property.style.backgroundColor = "#EA4335"
+        count2 = 0;
+      }
+    }
+    var count3 = 1;
+    function setColor3(btn) {
+      var property = document.getElementById(btn);
+      if (count3 == 0) {
+        property.style.backgroundColor = "#3C4043"
+        count3 = 1;
+      }
+      else {
+        property.style.backgroundColor = "#8ab4f8"
+        count3 = 0;
+      }
+    }
+    var count4 = 1;
+    function setColor4(btn) {
+      var property = document.getElementById(btn);
+      if (count4 == 0) {
+        property.style.backgroundColor = "#3C4043"
+        count4 = 1;
+      }
+      else {
+        property.style.backgroundColor = "#8ab4f8"
+        count4 = 0;
+      }
+    }
+    var count5 = 1;
+    function setColor5(btn) {
+      var property = document.getElementById(btn);
+      if (count5 == 0) {
+        property.style.backgroundColor = "#3C4043"
+        count5 = 1;
+      }
+      else {
+        property.style.backgroundColor = "#8ab4f8"
+        count5 = 0;
+      }
+    }
+    var count6 = 1;
+    var count7 = 1;
+    function setColor6(btn) {
+      var property = document.getElementById(btn);
+      var element = document.getElementById("div2");
+      element.classList.toggle("a");
+      if (count6 == 0) {
+        property.style.backgroundColor = "#3C4043";
+        count6 = 1;
+      }
+      else {
+        property.style.backgroundColor = "#8ab4f8";
+        count6 = 0;
+        if (count7 == 0) {
+          document.getElementById("btn7").style.backgroundColor = "#3C4043";
+          document.getElementById("div1").classList.toggle("a");
+          count7 = 1;
+        }
+      }
+    }
+    function setColor7(btn) {
+      var property = document.getElementById(btn);
+      var element = document.getElementById("div1");
+      element.classList.toggle("a");
+      if (count7 == 0) {
+        property.style.backgroundColor = "#3C4043";
+        count7 = 1;
+      }
+      else {
+        property.style.backgroundColor = "#8ab4f8";
+        count7 = 0;
+        if (count6 == 0) {
+          document.getElementById("btn6").style.backgroundColor = "#3C4043";
+          document.getElementById("div2").classList.toggle("a");
+          count6 = 1;
+      }
+      }
+    }
+  </script>
+</head>
+
+<body>
+
+  <header id="header" class="fixed-top d-flex align-items-center bg-dark">
+    <div class="container d-flex align-items-center justify-content-between">
+
+        <h1 class="logo"><a href="index.html">EventEase</a></h1>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto active" href="/EventEase/dashboard.html" id="username2">Home</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+  <div class="container-fluid">
+    <div class="row" style="margin-top:70px;">
+      <div class="col-6"><img src="main_page_img/0.jpeg" class="rounded m-2" height="100%" width="100%"></div>
+      <div class="col-6"  id="div3" style="display:flex; flex-wrap: wrap; justify-content:space-around;">
+        <div class="card text-white bg-secondary my-4 " style="width: 9em; height: 12rem">
+          <div class="card-header">Walter Olive</div>
+          <div class="card-body">
+            <div class="col"><img src="main_page_img/1.jpeg" class="rounded " height="100%" width="100%"></div>
+          </div>
+        </div>
+        <div class="card text-white bg-secondary my-4" style="width: 9em; height: 12rem">
+          <div class="card-header">Ayesha Sen</div>
+          <div class="card-body">
+            <div class="col"><img src="main_page_img/2.jpeg" class="rounded " height="100%" width="100%"></div>
+          </div>
+        </div>
+        <div class="card text-white bg-secondary my-4" style="width: 9em; height: 12rem">
+          <div class="card-header">Jen Ross</div>
+          <div class="card-body">
+            <div class="col"><img src="main_page_img/3.jpeg" class="rounded " height="100%" width="100%"></div>
+          </div>
+        </div>
+        <div class="card text-white bg-secondary my-4" style="width: 9em; height: 12rem">
+          <div class="card-header">Dylan Shyka</div>
+          <div class="card-body">
+            <div class="col"><img src="main_page_img/4.jpeg" class="rounded " height="100%" width="100%"></div>
+          </div>
+        </div>
+        <div class="card text-white bg-secondary my-4" style="width: 9em; height: 12rem" id="div4">
+          <div class="card-header">Dev Bansal</div>
+          <div class="card-body">
+            <div class="col"><img src="main_page_img/5.jpeg" class="rounded " height="100%" width="100%"></div>
+          </div>
+        </div>
+        <div class="card text-white bg-secondary my-4" style="width: 9em; height: 12rem;" id="div5">
+          <div class="card-header">Matt Naylor</div>
+          <div class="card-body">
+            <div class="col"><img src="main_page_img/6.jpeg" class="rounded " height="100%" width="100%"></div>
+          </div>
+        </div>
+        <div class="card text-white bg-secondary my-4" style="width: 9em; height: 12rem" id="div6">
+          <div class="card-header">Minka Willey</div>
+          <div class="card-body">
+            <div class="col"><img src="main_page_img/7.jpeg" class="rounded " height="100%" width="100%"></div>
+          </div>
+        </div>
+        <div class="card text-white bg-secondary my-4" style="width: 9em; height: 12rem" id="div7">
+          <div class="card-header">Ileana Shetty</div>
+          <div class="card-body">
+            <div class="col"><img src="main_page_img/8.jpeg" class="rounded " height="100%" width="100%"></div>
+          </div>
+        </div>
+      </div>
+    <div class="w-25 rounded fixed bg-white my-auto d-flex flex-column" id="div1">
+      <div class="d-flex justify-content-between mt-2">
+        <div class="my-auto">In-call messages</div>
+        <button type="button" class="btn btn-light" onclick="setColor7('btn7')"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="d-flex justify-content-between rounded my-3" style="background-color:#b1b1b3;">
+        <div class="my-auto p-2">Let everyone send messages</div>
+        <div class="form-check form-switch p-2">
+          <input class="form-check-input " type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+        </div>
+      </div>
+      <div class="rounded my-1" style="background-color:#b1b1b3;">
+        <div class="my-auto p-2">Messages can only be seen by people in the call and are deleted when the call ends.
+        </div>
+      </div>
+      <div style="height: 178px">
+      </div>
+      <div class="d-flex justify-content-between my-3">
+        <input class="form-control rounded-left"
+          style="background-color:#b1b1b3;  border-radius: 25px 0px 0px 25px; border-color: #b1b1b3" type="text"
+          placeholder="Send a message to everyone">
+        <button type="button" class="btn btn-light rounded-right"
+          style="background-color:#b1b1b3; border-radius: 0px 25px 25px 0px; border-color: #b1b1b3;"><svg
+            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send-fill"
+            viewBox="0 0 16 16">
+            <path
+              d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z" />
+          </svg></button>
+      </div>
+    </div>
+    <div class="w-25 rounded fixed bg-white my-autome-2 d-flex flex-column" id="div2">
+      <div class="d-flex justify-content-between mt-2">
+        <div class="my-auto">People</div>
+        <button type="button" class="btn btn-light" onclick="setColor6('btn6')"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="d-flex justify-content-around my-3">
+        <div class="d-flex flex-column justify-content-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-mic-mute" viewBox="0 0 16 16" style= "display: block; margin: auto">
+            <path d="M13 8c0 .564-.094 1.107-.266 1.613l-.814-.814A4.02 4.02 0 0 0 12 8V7a.5.5 0 0 1 1 0v1zm-5 4c.818 0 1.578-.245 2.212-.667l.718.719a4.973 4.973 0 0 1-2.43.923V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 1 0v1a4 4 0 0 0 4 4zm3-9v4.879l-1-1V3a2 2 0 0 0-3.997-.118l-.845-.845A3.001 3.001 0 0 1 11 3z"/>
+            <path d="m9.486 10.607-.748-.748A2 2 0 0 1 6 8v-.878l-1-1V8a3 3 0 0 0 4.486 2.607zm-7.84-9.253 12 12 .708-.708-12-12-.708.708z"/>
+          </svg>
+          <div>All muted</div>
+        </div>
+        <div class="d-flex flex-column">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person-plus" viewBox="0 0 16 16" style= "display: block; margin: auto">
+            <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+            <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+          </svg>
+          <div>Add people</div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-between rounded my-3 border border-dark">
+        <svg xmlns="http://www.w3.org/2000/svg" style= "display: block; margin: auto" width="20" height="20" fill="currentColor" class="bi bi-search mx-2" viewBox="0 0 16 16">
+          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+        </svg>
+        <input class="form-control"
+           type="text"
+          placeholder="Send a message to everyone">
+      </div>
+      <div class="rounded my-1">
+        <div class="my-auto p-2">In-call
+        </div>
+      <div>
+        <ul>
+          <li>Walter Olive</li>
+          <li>Ayesha Sen</li>
+          <li>Jen Ross</li>
+          <li>Dylan Shyka</li>
+          <li>Dev Bansal</li>
+          <li>Matt Naylor</li>
+          <li>Minka Willey</li>
+          <li>Ileana Shetty</li>
+        </ul>
+      </div>
+    </div>
+    </div>
+  
+  
+  </div>
+
+  <footer class="bg-dark text-center text-white fixed-bottom">
+    <section class="d-flex justify-content-center justify-content-lg-between  border-bottom">
+
+      <div class="mx-3 mt-3 mb-4 d-lg-block">
+        <span id="cnfname">Conference Name</span>
+      </div>
+      <div>
+        <a class="btn btn-secondary btn-floating mt-2 mb-4 rounded-circle" style="background-color: #3C4043;" href="#!"
+          role="button" title="Microphone" id="btn1" onclick="setColor1('btn1')"><i
+            class="fa-solid fa-microphone"></i></a>
+
+        <a class="btn btn-secondary btn-floating mt-2 mb-4 mx-1 rounded-circle" style="background-color: #3C4043;"
+          href="#!" role="button" title="Camera" id="btn2" onclick="setColor2('btn2')"><i
+            class="fa-solid fa-video"></i></a>
+
+        <a class="btn btn-secondary btn-floating mt-2 mb-4 mx-1 rounded-circle" style="background-color: #3C4043;"
+          href="#!" role="button" title="Captions" id="btn3" onclick="setColor3('btn3')"><i
+            class="fa-regular fa-closed-captioning"></i></a>
+
+        <a class="btn btn-secondary btn-floating mt-2 mb-4 mx-1 rounded-circle" style="background-color: #3C4043;"
+          href="#!" role="button" title="Raise Hand" id="btn4" onclick="setColor4('btn4')"><i
+            class="fa-regular fa-hand"></i></a>
+
+        <a class="btn btn-secondary btn-floating mt-2 mb-4 mx-1 rounded-circle" style="background-color: #3C4043;"
+          href="#!" role="button" title="Present Screen" id="btn5" onclick="setColor5('btn5')"><i
+            class="fa-solid fa-arrow-up-from-bracket"></i></a>
+        <a class="btn btn-secondary btn-floating mt-2 mb-4 mx-1 rounded-circle" style="background-color: #3C4043;"
+          href="#!" role="button" title="More Options"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+        <a class="btn btn-danger btn-floating mt-2 mb-4 mx-1 rounded-circle" style="background-color: 	#EA4335;"
+          href="/EventEase/join_meeting.html" role="button" title="Leave Conference"><i class="fa-solid fa-xmark"></i></a>
+      </div>
+      <div>
+
+
+        <a class="btn btn-secondary btn-floating mt-2 mb-4 mx-1 rounded-circle" style="background-color: #3C4043;"
+          href="#!" role="button" title="Participants" id="btn6" onclick="setColor6('btn6')"><i class="fa-solid fa-user-group"></i></a>
+
+        <a class="btn btn-secondary btn-floating mt-2 mb-4 mx-1 rounded-circle" style="background-color: #3C4043;"
+          href="#!" role="button" title="Chat" id="btn7" onclick="setColor7('btn7')"><i class="fa-solid fa-message"></i></a>
+        <a class="btn btn-secondary btn-floating mt-2 mb-4 mx-1" style="background-color: #3C4043;" href="/EventEase/submit_paper.html"
+          role="button" title="Submit Paper">Submit</a>
+      </div>
+    </section>
+  </footer>
+
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+    <script>
+      const confername1 = localStorage.getItem("SCHNAME");
+      document.getElementById('cnfname').innerHTML = confername1 + " Meet";
+  </script>
+  <script>
+    const name = localStorage.getItem("USERNAME");
+    document.getElementById('username2').innerHTML = name;
+</script>
+
+</body>
+
+
+</html>

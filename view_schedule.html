@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Schedules - EventEase</title>
+    <!-- <link rel="icon" href="files/Images/icon2.png"> -->
+    <link rel="stylesheet" href="all_css/login_css.css">
+    <!-- <link rel="stylesheet" href="all_css/add_speaker_css.css"> -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <style>
+        body {
+            background-color: #eee;
+        }
+
+        .list-timeline {
+            margin: 0;
+            padding: 5px 0;
+            position: relative
+        }
+
+        .list-timeline:before {
+            width: 1px;
+            background: #ccc;
+            position: absolute;
+            left: 6px;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            content: ''
+        }
+
+        .list-timeline .list-timeline-item {
+            margin: 0;
+            padding: 0;
+            padding-left: 24px !important;
+            position: relative
+        }
+
+        .list-timeline .list-timeline-item:before {
+            width: 12px;
+            height: 12px;
+            background: #fff;
+            border: 2px solid #ccc;
+            position: absolute;
+            left: 0;
+            top: 4px;
+            content: '';
+            border-radius: 100%;
+            -webkit-transition: all .3 ease-in-out;
+            transition: all .3 ease-in-out
+        }
+
+        .cntbox {
+            margin-top: 15%;
+        }
+
+        @keyframes slideInLeft {
+            0% {
+                transform: translateY(100%);
+                opacity: 0;
+                
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .container1 {
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0s;
+            /* transition: opacity 5s; */
+            /* animation-iteration-count: 2; */
+            animation-name: slideInLeft;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header" class="fixed-top d-flex align-items-center bg-dark">
+        <div class="container d-flex align-items-center justify-content-between">
+
+            <h1 class="logo"><a href="index.html">EventEase</a></h1>
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="/EventEase/dashboard.html" id="username2">Home</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto container1" id="Saturday, Nov 14th">
+        <div class="card border-0 shadow rounded-3 cntbox">
+            <div class="card-body p-4 p-sm-5 ">
+                <h1 class="text-uppercase text-letter-spacing-xs font-weight-bold my-4"
+                    style="color: #054a85; text-align: center;" id="ConferName1">Conference Name</h1>
+                <h4 class="mx-auto" style="color: #054a85bd; text-align: center;" id="ioname"></h4>
+                <h4 class="mx-auto" style="color: #054a85bd; text-align: center;" id="ihname"></h4>
+                <h4 class="mx-auto" style="color: #054a85bd; text-align: center;" id="isname"></h4>
+                <h4 class="mx-auto" style="color: #054a85bd; text-align: center;" id="idate"></h4>
+                <br>
+                <ul class="list-timeline list-timeline-primary " id="tasks">
+                </ul>
+            </div>
+            <div class="d-grid donbtn my-3">
+                <a href="/EventEase/main_page.html" style="margin-bottom: 25px;margin-top: -6%;"><button
+                        class="donebtn btn-dark text-uppercase" type="button" id="done"
+                        style="height: 134%;width: 40%;border-radius: 9px;margin-left: 30%;background-color: #054a85;">Join
+                        Event</button></a>
+            </div>
+            <div class="d-grid donbtn my-3">
+                <a href="/EventEase/join_meeting.html" style="margin-bottom: 25px;margin-top: -6%;"><button
+                        class="donebtn btn-dark text-uppercase" type="button" id="done"
+                        style="height: 134%;width: 40%;border-radius: 9px;margin-left: 30%;">Back</button></a>
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->
+
+
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+
+    <!-- Template Main JS File -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
+        import { getAuth } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-auth.js";
+        import {
+            getFirestore, doc, getDoc, getDocs, onSnapshot, collection
+        } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore.js";
+        import { getDatabase, ref, get, set, child, update, remove }
+            from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
+
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCCuHkFfn2mx2-shXrkVe_DiTNgHqz1Cos",
+            authDomain: "sefinal-865fc.firebaseapp.com",
+            projectId: "sefinal-865fc",
+            storageBucket: "sefinal-865fc.appspot.com",
+            messagingSenderId: "477088374267",
+            appId: "1:477088374267:web:4dcc40c8f70ccc9a977f5e"
+        };
+
+        // Initialize Firebase
+
+        const confername = localStorage.getItem("SCHNAME");
+
+
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase();
+
+        function AddItemsToTable(etime, ename) {
+            const list_el = document.querySelector("#tasks");
+
+            const task_el1 = document.createElement('li');
+            task_el1.classList.add("list-timeline-item", "p-0", "pb-3", "pb-lg-4", "d-flex", "flex-wrap", "flex-column");
+
+            const task_el2 = document.createElement('h5');
+            task_el2.classList.add("my-0", "text-dark", "flex-fw", "text-sm", "text-uppercase");
+            task_el2.textContent = etime;
+
+            const task_el3 = document.createElement('span');
+            task_el3.classList.add("text-inverse", "op-8");
+            task_el3.textContent = " - " + ename;
+
+
+
+            list_el.appendChild(task_el1);
+            task_el1.appendChild(task_el2);
+            task_el2.appendChild(task_el3);
+        }
+
+        function getHostData() {
+            const dbRef = ref(db);
+            get(child(dbRef, "allDetails/" + confername)).then((snapshot) => {
+                if (snapshot.exists()) {
+                    var hname = snapshot.val().hostname;
+                    var sname = snapshot.val().speakername;
+                    var oname = snapshot.val().orgname;
+                    var idate = snapshot.val().date;
+
+                    document.getElementById('ioname').innerHTML = "Organisation : " + oname;
+                    document.getElementById('ihname').innerHTML = "Host : " + hname;
+                    document.getElementById('isname').innerHTML = "Speaker : " + sname;
+                    document.getElementById('idate').innerHTML = "Date : " + idate;
+
+                }
+            });
+        }
+
+        getHostData();
+
+        function SelectAllData() {
+            const dbRef = ref(db);
+            get(child(dbRef, "meetings/" + confername + "/schedule"))
+                .then((snapshot) => {
+                    // alert("Hello");
+                    snapshot.forEach(childSnapshot => {
+                        var etime = childSnapshot.val().EventTime;
+                        var ename = childSnapshot.val().nameTask;
+                        AddItemsToTable(etime, ename);
+                        // alert(etime+ "  "+ ename);
+                    })
+                })
+        }
+
+
+
+        // window.onload =function(){alert("Hello")};
+        window.onload = SelectAllData();
+
+
+
+                // registerData.addEventListener('click', InsertData);
+    </script>
+    <script>
+        const name = localStorage.getItem("USERNAME");
+        document.getElementById('username2').innerHTML = name;
+    </script>
+    <script>
+        const confername1 = localStorage.getItem("SCHNAME");
+        document.getElementById('ConferName1').innerHTML = confername1 + " Schedule";
+    </script>
+
+
+</body>
+
+</html>
